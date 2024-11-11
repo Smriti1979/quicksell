@@ -19,7 +19,7 @@ function Column({ title, tickets, users }) {
     'Cancelled': <img src={CancelledIcon} alt="Cancelled" className="column-icon" />,
   };
 
-  const columnIcon = columnIcons[title] || <span className="column-icon">[Icon]</span>;
+  const columnIcon = columnIcons[title] || <span className="column-icon">[{title}]</span>;
 
   return (
     <div className="column">
