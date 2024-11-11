@@ -10,9 +10,10 @@ import Add from '../../assets/add.svg';
 import Options from '../../assets/3 dot menu.svg';
 
 function Column({ title, tickets, users }) {
+  console.log('Column:', title, tickets);
   const columnIcons = {
-    'To Do': <img src={TodoIcon} alt="To Do" className="column-icon" />,
-    'In Progress': <img src={InProgressIcon} alt="In Progress" className="column-icon" />,
+    'Todo': <img src={TodoIcon} alt="To Do" className="column-icon" />,
+    'In progress': <img src={InProgressIcon} alt="In Progress" className="column-icon" />,
     'Done': <img src={DoneIcon} alt="Done" className="column-icon" />,
     'Backlog': <img src={BacklogIcon} alt="Backlog" className="column-icon" />,
     'Cancelled': <img src={CancelledIcon} alt="Cancelled" className="column-icon" />,
