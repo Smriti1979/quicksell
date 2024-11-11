@@ -1,0 +1,219 @@
+/* src/components/Board.css */
+.board {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    min-height: calc(100vh - 100px); /* Adjust based on your header height */
+    background-color: #f4f5f8;
+}
+
+.board::-webkit-scrollbar {
+    height: 8px;
+}
+
+.board::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.board::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.board::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+/* Column Styles */
+.column {
+    min-width: 300px;
+    width: 300px;
+    background: transparent;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #373737;
+}
+
+.column-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.column-header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ticket-count {
+    color: #666;
+    font-size: 14px;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #e6e7eb;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.ticket-id {
+    color: #6B6F76;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.user-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f4f5f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 15px;
+    color: #373737;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.card-footer {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: #f4f5f8;
+    border: 1px solid #e6e7eb;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #6B6F76;
+}
+
+/* Priority Colors */
+.priority-urgent {
+    color: #fc7840;
+}
+
+.priority-high {
+    color: #fb6b6b;
+}
+
+.priority-medium {
+    color: #f1c950;
+}
+
+.priority-low {
+    color: #6b6f76;
+}
+
+.priority-no {
+    color: #6b6f76;
+}
+
+/* Status Colors */
+.status-todo {
+    color: #6B6F76;
+}
+
+.status-in-progress {
+    color: #f1c950;
+}
+
+.status-done {
+    color: #5dc66a;
+}
+
+.status-backlog {
+    color: #6B6F76;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .board {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .column {
+        min-width: 280px;
+        width: 280px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+}
+
+/* Additional utility classes */
+.hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Optional: Add smooth transitions */
+.card, .tag, .user-avatar {
+    transition: all 0.2s ease;
+}
