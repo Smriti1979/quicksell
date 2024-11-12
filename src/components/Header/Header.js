@@ -26,15 +26,17 @@ function Header({grouping, sorting, setGrouping, setSorting}){
                                 <option value="priority">Priority</option>
                             </select>
                         </div>
-
-                        <div className ="dopdown-menu">
+                        <div className="dropdown-item">
                             <span>Ordering</span>
                             <select value={sorting}
-                            onChange={(e)=>setSorting(e.target.value)}>
+                            onChange={(e)=> setSorting(e.target.value)}>
+                                
                                 <option value="priority">Priority</option>
                                 <option value="title">Title</option>
                             </select>
                         </div>
+
+               
                     </div>
                 )}
         </div>
