@@ -15,7 +15,7 @@ function App() {
 
   const fetchData = async () =>{
     try {
-    const response = await fetch('http://api.quicksell.co/v1/internal/frontend-assignment');
+    const response = await fetch('https://api.quicksell.co/v1/internal/frontend-assignment');
     const data = await response.json();
     setTickets(data.tickets);
     setUsers(data.users);
